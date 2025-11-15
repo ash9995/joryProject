@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام الطلبات الرقمية والدعم - نموذج التقديم</title>
+    <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌐 نظام الطلبات الرقمية والدعم</h1>
+            <p>مرحباً بكم في نظام تقديم طلبات الدعم الإلكتروني</p>
+        </header>
+
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link active">نموذج التقديم</a>
+            <a href="dashboard.html" class="nav-link">لوحة تحكم الموظفين</a>
+        </nav>
+
+        <main class="form-container">
+            <div class="form-header">
+                <h2>📝 نموذج طلب الدعم</h2>
+                <p>يرجى تعبئة النموذج أدناه لتقديم طلب الدعم</p>
+            </div>
+
+            <form id="application-form" class="application-form">
+                <div class="form-group">
+                    <label for="applicantName">اسم مقدم الطلب *</label>
+                    <input type="text" id="applicantName" name="applicantName" required placeholder="أدخل الاسم الكامل">
+                </div>
+
+                <div class="form-group">
+                    <label for="contactInfo">معلومات التواصل *</label>
+                    <input type="text" id="contactInfo" name="contactInfo" required placeholder="البريد الإلكتروني أو رقم الهاتف">
+                </div>
+
+                <div class="form-group">
+                    <label for="applicantType">نوع مقدم الطلب *</label>
+                    <select id="applicantType" name="applicantType" required>
+                        <option value="">اختر النوع</option>
+                        <option value="عائلة">عائلة</option>
+                        <option value="جمعية">جمعية</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="supportNeeded">نوع الدعم المطلوب *</label>
+                    <textarea id="supportNeeded" name="supportNeeded" required placeholder="صف تفاصيل الدعم الذي تحتاجه..." rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="priority">أولوية الطلب *</label>
+                    <select id="priority" name="priority" required>
+                        <option value="">اختر الأولوية</option>
+                        <option value="عاجل">عاجل</option>
+                        <option value="متوسط">متوسط</option>
+                        <option value="منخفض">منخفض</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn">📤 تقديم الطلب</button>
+            </form>
+
+            <div id="success-message" class="success-message hidden">
+                ✅ تم تقديم طلبك بنجاح! رقم الطلب: <span id="application-id"></span>
+            </div>
+
+            <div class="info-box">
+                <h3> معلومات مهمة</h3>
+                <ul>
+                    <li>جميع الحقول إلزامية</li>
+                    <li>سيتم مراجعة طلبك خلال 3-5 أيام عمل</li>
+                    <li>للاستفسارات يرجى التواصل مع الدعم الفني</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2024 نظام الطلبات الرقمية والدعم -  صنع في السعودية</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام الطلبات الرقمية والدعم - لوحة التحكم</title>
+    <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>👨‍💼 لوحة تحكم الموظفين</h1>
+            <p>مراقبة وإدارة طلبات الدعم المقدمة</p>
+        </header>
+
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">نموذج التقديم</a>
+            <a href="dashboard.html" class="nav-link active">لوحة تحكم الموظفين</a>
+        </nav>
+
+        <div class="dashboard-header">
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-number" id="total-applications">0</div>
+                    <div class="stat-label">إجمالي الطلبات</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="pending-applications">0</div>
+                    <div class="stat-label">طلبات قيد الانتظار</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="approved-applications">0</div>
+                    <div class="stat-label">طلبات معتمدة</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="rejected-applications">0</div>
+                    <div class="stat-label">طلبات مرفوضة</div>
+                </div>
+            </div>
+
+            <div class="dashboard-actions">
+                <button id="clear-all-btn" class="clear-btn">🗑️ مسح جميع الطلبات</button>
+                <button id="refresh-btn" class="refresh-btn">🔄 تحديث البيانات</button>
+            </div>
+        </div>
+
+        <div class="filters-section">
+            <div class="filter-group">
+                <label for="status-filter">تصفية حسب الحالة:</label>
+                <select id="status-filter">
+                    <option value="all">جميع الحالات</option>
+                    <option value="قيد الانتظار">قيد الانتظار</option>
+                    <option value="قيد المراجعة">قيد المراجعة</option>
+                    <option value="معتمد">معتمد</option>
+                    <option value="مرفوض">مرفوض</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="priority-filter">تصفية حسب الأولوية:</label>
+                <select id="priority-filter">
+                    <option value="all">جميع الأولويات</option>
+                    <option value="عاجل">عاجل</option>
+                    <option value="متوسط">متوسط</option>
+                    <option value="منخفض">منخفض</option>
+                </select>
+            </div>
+        </div>
+
+        <main class="dashboard-container">
+            <div id="application-list" class="application-list">
+                <!-- Applications will be dynamically loaded here -->
+                <div class="empty-state">
+                    📭 لا توجد طلبات مرفوعة حتى الآن
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2024 نظام الطلبات الرقمية والدعم - مركز التنمية الاجتماعية</p>
+        </footer>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
